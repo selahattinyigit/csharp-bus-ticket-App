@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBiletModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbBiletler">
+    <Key>
+      <PropertyRef Name="bilet_id" />
+    </Key>
+    <Property Name="bilet_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sefer_id" Type="int" />
+    <Property Name="ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="tc" Type="nvarchar" MaxLength="15" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="koltuk_no" Type="int" />
+    <Property Name="ucret" Type="float" />
+    <Property Name="cinsiyet" Type="bit" />
+    <Property Name="kullanici_adi" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tbKullanicilar">
+    <Key>
+      <PropertyRef Name="kullanici_adi" />
+    </Key>
+    <Property Name="kullanici_adi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="kullanici_sifresi" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="kullanici_ad_soyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="kullanici_mail" Type="nvarchar" MaxLength="30" />
+    <Property Name="kullanici_tel" Type="nvarchar" MaxLength="30" />
+    <Property Name="kullanici_adres" Type="nvarchar" MaxLength="70" />
+    <Property Name="kullanici_admin" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbOtobusler">
+    <Key>
+      <PropertyRef Name="plaka" />
+    </Key>
+    <Property Name="plaka" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="otobus_marka" Type="nvarchar" MaxLength="30" />
+    <Property Name="otobus_model" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tbSeferler">
+    <Key>
+      <PropertyRef Name="sefer_id" />
+    </Key>
+    <Property Name="sefer_id" Type="int" Nullable="false" />
+    <Property Name="sefer_tarih" Type="date" />
+    <Property Name="sefer_saat" Type="time" Precision="7" />
+    <Property Name="sefer_baslangic_sube" Type="int" />
+    <Property Name="sefer_bitis_sube" Type="int" />
+    <Property Name="fiyat" Type="float" />
+    <Property Name="plaka" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tbSubeler">
+    <Key>
+      <PropertyRef Name="sube_id" />
+    </Key>
+    <Property Name="sube_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sube_ad" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="tbSubeler2">
+    <Key>
+      <PropertyRef Name="sube_id" />
+    </Key>
+    <Property Name="sube_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sube_ad_bitis" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK_tbBiletler_tbKullanicilar">
+    <End Role="tbKullanicilar" Type="Self.tbKullanicilar" Multiplicity="0..1" />
+    <End Role="tbBiletler" Type="Self.tbBiletler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbKullanicilar">
+        <PropertyRef Name="kullanici_adi" />
+      </Principal>
+      <Dependent Role="tbBiletler">
+        <PropertyRef Name="kullanici_adi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbBiletler_tbSeferler">
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="0..1" />
+    <End Role="tbBiletler" Type="Self.tbBiletler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSeferler">
+        <PropertyRef Name="sefer_id" />
+      </Principal>
+      <Dependent Role="tbBiletler">
+        <PropertyRef Name="sefer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSeferler_tbOtobusler">
+    <End Role="tbOtobusler" Type="Self.tbOtobusler" Multiplicity="0..1" />
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbOtobusler">
+        <PropertyRef Name="plaka" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="plaka" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSeferler_tbSubeler2">
+    <End Role="tbSubeler" Type="Self.tbSubeler" Multiplicity="0..1" />
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSubeler">
+        <PropertyRef Name="sube_id" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="sefer_baslangic_sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSeferler_tbSubeler21">
+    <End Role="tbSubeler2" Type="Self.tbSubeler2" Multiplicity="0..1" />
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSubeler2">
+        <PropertyRef Name="sube_id" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="sefer_bitis_sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbBiletModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbBiletler" EntityType="Self.tbBiletler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbKullanicilar" EntityType="Self.tbKullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbOtobusler" EntityType="Self.tbOtobusler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSeferler" EntityType="Self.tbSeferler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSubeler" EntityType="Self.tbSubeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSubeler2" EntityType="Self.tbSubeler2" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbBiletler_tbKullanicilar" Association="Self.FK_tbBiletler_tbKullanicilar">
+      <End Role="tbKullanicilar" EntitySet="tbKullanicilar" />
+      <End Role="tbBiletler" EntitySet="tbBiletler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbBiletler_tbSeferler" Association="Self.FK_tbBiletler_tbSeferler">
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+      <End Role="tbBiletler" EntitySet="tbBiletler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSeferler_tbOtobusler" Association="Self.FK_tbSeferler_tbOtobusler">
+      <End Role="tbOtobusler" EntitySet="tbOtobusler" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSeferler_tbSubeler2" Association="Self.FK_tbSeferler_tbSubeler2">
+      <End Role="tbSubeler" EntitySet="tbSubeler" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSeferler_tbSubeler21" Association="Self.FK_tbSeferler_tbSubeler21">
+      <End Role="tbSubeler2" EntitySet="tbSubeler2" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

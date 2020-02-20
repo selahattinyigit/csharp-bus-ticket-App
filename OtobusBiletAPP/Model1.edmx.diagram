@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e6b00a72c0584461b80cf3b819fc8078" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="dbBiletModel.tbBiletler" Width="1.5" PointX="6.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbBiletModel.tbKullanicilar" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbBiletModel.tbOtobusler" Width="1.5" PointX="0.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbBiletModel.tbSeferler" Width="1.5" PointX="2.625" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbBiletModel.tbSubeler" Width="1.5" PointX="0.5" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="dbBiletModel.FK_tbBiletler_tbKullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="dbBiletModel.FK_tbBiletler_tbSeferler" ManuallyRouted="false" />
+        <AssociationConnector Association="dbBiletModel.FK_tbSeferler_tbOtobusler" ManuallyRouted="false" />
+        <AssociationConnector Association="dbBiletModel.FK_tbSeferler_tbSubeler" ManuallyRouted="false" />
+        <AssociationConnector Association="dbBiletModel.FK_tbSeferler_tbSubeler1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbBiletModel.tbSubeler2" Width="1.5" PointX="5" PointY="5" />
+        <AssociationConnector Association="dbBiletModel.FK_tbSeferler_tbSubeler21" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

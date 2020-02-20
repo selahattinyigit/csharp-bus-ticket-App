@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBB8A5C0-B35D-48DC-969C-BD3BC50850FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OtobusBiletAPP</RootNamespace>
+    <AssemblyName>OtobusBiletAPP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBilet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilet.Designer.cs">
+      <DependentUpon>frmBilet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBiletAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiletAl.Designer.cs">
+      <DependentUpon>frmBiletAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBiletGöster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBiletGöster.Designer.cs">
+      <DependentUpon>frmBiletGöster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtobus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtobus.Designer.cs">
+      <DependentUpon>frmOtobus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonel.Designer.cs">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonelEkle.Designer.cs">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor.Designer.cs">
+      <DependentUpon>frmRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeferEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeferEkle.Designer.cs">
+      <DependentUpon>frmSeferEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeferler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeferler.Designer.cs">
+      <DependentUpon>frmSeferler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSube.Designer.cs">
+      <DependentUpon>frmSube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbBiletler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbKullanicilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbOtobusler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbSeferler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbSubeler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbSubeler2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usrBilet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrBilet.Designer.cs">
+      <DependentUpon>usrBilet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrOtobus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrOtobus.Designer.cs">
+      <DependentUpon>usrOtobus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrPersonel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrPersonel.Designer.cs">
+      <DependentUpon>usrPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrSefer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrSefer.Designer.cs">
+      <DependentUpon>usrSefer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usrYolcu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usrYolcu.Designer.cs">
+      <DependentUpon>usrYolcu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilet.resx">
+      <DependentUpon>frmBilet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBiletAl.resx">
+      <DependentUpon>frmBiletAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBiletGöster.resx">
+      <DependentUpon>frmBiletGöster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtobus.resx">
+      <DependentUpon>frmOtobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonel.resx">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonelEkle.resx">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor.resx">
+      <DependentUpon>frmRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeferEkle.resx">
+      <DependentUpon>frmSeferEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeferler.resx">
+      <DependentUpon>frmSeferler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSube.resx">
+      <DependentUpon>frmSube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="usrBilet.resx">
+      <DependentUpon>usrBilet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrOtobus.resx">
+      <DependentUpon>usrOtobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrPersonel.resx">
+      <DependentUpon>usrPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrSefer.resx">
+      <DependentUpon>usrSefer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usrYolcu.resx">
+      <DependentUpon>usrYolcu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbBiletModelStoreContainer" CdmEntityContainer="dbBiletEntities">
+    <EntitySetMapping Name="tbBiletler">
+      <EntityTypeMapping TypeName="dbBiletModel.tbBiletler">
+        <MappingFragment StoreEntitySet="tbBiletler">
+          <ScalarProperty Name="bilet_id" ColumnName="bilet_id" />
+          <ScalarProperty Name="sefer_id" ColumnName="sefer_id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="koltuk_no" ColumnName="koltuk_no" />
+          <ScalarProperty Name="ucret" ColumnName="ucret" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbKullanicilar">
+      <EntityTypeMapping TypeName="dbBiletModel.tbKullanicilar">
+        <MappingFragment StoreEntitySet="tbKullanicilar">
+          <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+          <ScalarProperty Name="kullanici_sifresi" ColumnName="kullanici_sifresi" />
+          <ScalarProperty Name="kullanici_ad_soyad" ColumnName="kullanici_ad_soyad" />
+          <ScalarProperty Name="kullanici_mail" ColumnName="kullanici_mail" />
+          <ScalarProperty Name="kullanici_tel" ColumnName="kullanici_tel" />
+          <ScalarProperty Name="kullanici_adres" ColumnName="kullanici_adres" />
+          <ScalarProperty Name="kullanici_admin" ColumnName="kullanici_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbOtobusler">
+      <EntityTypeMapping TypeName="dbBiletModel.tbOtobusler">
+        <MappingFragment StoreEntitySet="tbOtobusler">
+          <ScalarProperty Name="plaka" ColumnName="plaka" />
+          <ScalarProperty Name="otobus_marka" ColumnName="otobus_marka" />
+          <ScalarProperty Name="otobus_model" ColumnName="otobus_model" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSeferler">
+      <EntityTypeMapping TypeName="dbBiletModel.tbSeferler">
+        <MappingFragment StoreEntitySet="tbSeferler">
+          <ScalarProperty Name="sefer_id" ColumnName="sefer_id" />
+          <ScalarProperty Name="sefer_tarih" ColumnName="sefer_tarih" />
+          <ScalarProperty Name="sefer_saat" ColumnName="sefer_saat" />
+          <ScalarProperty Name="sefer_baslangic_sube" ColumnName="sefer_baslangic_sube" />
+          <ScalarProperty Name="sefer_bitis_sube" ColumnName="sefer_bitis_sube" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="plaka" ColumnName="plaka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSubeler">
+      <EntityTypeMapping TypeName="dbBiletModel.tbSubeler">
+        <MappingFragment StoreEntitySet="tbSubeler">
+          <ScalarProperty Name="sube_id" ColumnName="sube_id" />
+          <ScalarProperty Name="sube_ad" ColumnName="sube_ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSubeler2">
+      <EntityTypeMapping TypeName="dbBiletModel.tbSubeler2">
+        <MappingFragment StoreEntitySet="tbSubeler2">
+          <ScalarProperty Name="sube_ad_bitis" ColumnName="sube_ad_bitis" />
+          <ScalarProperty Name="sube_id" ColumnName="sube_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

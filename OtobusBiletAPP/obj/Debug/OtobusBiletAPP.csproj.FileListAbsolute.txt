@@ -1,0 +1,59 @@
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\OtobusBiletAPP.exe.config
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\OtobusBiletAPP.exe
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\OtobusBiletAPP.pdb
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.Properties.Resources.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.csproj.GenerateResource.Cache
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.exe
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.pdb
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.Form2.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmBilet.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.dll
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.xml
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmOtobus.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmSube.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmPersonel.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmPersonelEkle.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmSeferler.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmSeferEkle.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmBiletAl.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.Form1.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmBiletGöster.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.csprojResolveAssemblyReference.cache
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmRapor.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrSefer.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrYolcu.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrOtobus.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrBilet.resources
+C:\Users\SELAHATTİN\Documents\Visual Studio 2015\Projects\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrPersonel.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\OtobusBiletAPP.exe.config
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\OtobusBiletAPP.exe
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\OtobusBiletAPP.pdb
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.dll
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.xml
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.csprojAssemblyReference.cache
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.Form1.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.Form2.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmBilet.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmBiletAl.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmBiletGöster.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmOtobus.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmPersonel.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmPersonelEkle.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmRapor.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmSeferEkle.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmSeferler.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.frmSube.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.Properties.Resources.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrBilet.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrOtobus.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrPersonel.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrSefer.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.usrYolcu.resources
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.csproj.GenerateResource.cache
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.csproj.CopyComplete
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.exe
+C:\Users\SELAHATTİN\Desktop\ydk\OtobusBiletAPP\OtobusBiletAPP\obj\Debug\OtobusBiletAPP.pdb

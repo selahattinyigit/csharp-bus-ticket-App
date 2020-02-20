@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBiletModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbBiletler">
+    <Key>
+      <PropertyRef Name="bilet_id" />
+    </Key>
+    <Property Name="bilet_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sefer_id" Type="Int32" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tc" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="koltuk_no" Type="Int32" />
+    <Property Name="ucret" Type="Double" />
+    <Property Name="cinsiyet" Type="Boolean" />
+    <Property Name="kullanici_adi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbKullanicilar" Relationship="Self.FK_tbBiletler_tbKullanicilar" FromRole="tbBiletler" ToRole="tbKullanicilar" />
+    <NavigationProperty Name="tbSeferler" Relationship="Self.FK_tbBiletler_tbSeferler" FromRole="tbBiletler" ToRole="tbSeferler" />
+  </EntityType>
+  <EntityType Name="tbKullanicilar" Abstract="false">
+    <Key>
+      <PropertyRef Name="kullanici_adi" />
+    </Key>
+    <Property Name="kullanici_adi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kullanici_sifresi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="kullanici_ad_soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_mail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_adres" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_admin" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbOtobusler">
+    <Key>
+      <PropertyRef Name="plaka" />
+    </Key>
+    <Property Name="plaka" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="otobus_marka" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="otobus_model" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbSeferler">
+    <Key>
+      <PropertyRef Name="sefer_id" />
+    </Key>
+    <Property Name="sefer_id" Type="Int32" Nullable="false" />
+    <Property Name="sefer_tarih" Type="DateTime" Precision="0" />
+    <Property Name="sefer_saat" Type="Time" Precision="7" />
+    <Property Name="sefer_baslangic_sube" Type="Int32" />
+    <Property Name="sefer_bitis_sube" Type="Int32" />
+    <Property Name="fiyat" Type="Double" />
+    <Property Name="plaka" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbSubeler2" Relationship="dbBiletModel.FK_tbSeferler_tbSubeler21" FromRole="tbSeferler" ToRole="tbSubeler2" />
+  </EntityType>
+  <EntityType Name="tbSubeler">
+    <Key>
+      <PropertyRef Name="sube_id" />
+    </Key>
+    <Property Name="sube_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sube_ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbBiletler_tbKullanicilar">
+    <End Role="tbKullanicilar" Type="Self.tbKullanicilar" Multiplicity="0..1" />
+    <End Role="tbBiletler" Type="Self.tbBiletler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbKullanicilar">
+        <PropertyRef Name="kullanici_adi" />
+      </Principal>
+      <Dependent Role="tbBiletler">
+        <PropertyRef Name="kullanici_adi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbBiletler_tbSeferler">
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="0..1" />
+    <End Role="tbBiletler" Type="Self.tbBiletler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSeferler">
+        <PropertyRef Name="sefer_id" />
+      </Principal>
+      <Dependent Role="tbBiletler">
+        <PropertyRef Name="sefer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSeferler_tbOtobusler">
+    <End Role="tbOtobusler" Type="Self.tbOtobusler" Multiplicity="0..1" />
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbOtobusler">
+        <PropertyRef Name="plaka" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="plaka" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSeferler_tbSubeler">
+    <End Role="tbSubeler" Type="Self.tbSubeler" Multiplicity="0..1" />
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSubeler">
+        <PropertyRef Name="sube_id" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="sefer_baslangic_sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSeferler_tbSubeler1">
+    <End Role="tbSubeler" Type="Self.tbSubeler" Multiplicity="0..1" />
+    <End Role="tbSeferler" Type="Self.tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSubeler">
+        <PropertyRef Name="sube_id" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="sefer_bitis_sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbBiletEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbBiletler" EntityType="Self.tbBiletler" />
+    <EntitySet Name="tbKullanicilar" EntityType="Self.tbKullanicilar" />
+    <EntitySet Name="tbOtobusler" EntityType="Self.tbOtobusler" />
+    <EntitySet Name="tbSeferler" EntityType="Self.tbSeferler" />
+    <EntitySet Name="tbSubeler" EntityType="Self.tbSubeler" />
+    <AssociationSet Name="FK_tbBiletler_tbKullanicilar" Association="Self.FK_tbBiletler_tbKullanicilar">
+      <End Role="tbKullanicilar" EntitySet="tbKullanicilar" />
+      <End Role="tbBiletler" EntitySet="tbBiletler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbBiletler_tbSeferler" Association="Self.FK_tbBiletler_tbSeferler">
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+      <End Role="tbBiletler" EntitySet="tbBiletler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSeferler_tbOtobusler" Association="Self.FK_tbSeferler_tbOtobusler">
+      <End Role="tbOtobusler" EntitySet="tbOtobusler" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSeferler_tbSubeler" Association="Self.FK_tbSeferler_tbSubeler">
+      <End Role="tbSubeler" EntitySet="tbSubeler" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSeferler_tbSubeler1" Association="Self.FK_tbSeferler_tbSubeler1">
+      <End Role="tbSubeler" EntitySet="tbSubeler" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+    <EntitySet Name="tbSubeler2" EntityType="dbBiletModel.tbSubeler2" />
+    <AssociationSet Name="FK_tbSeferler_tbSubeler21" Association="dbBiletModel.FK_tbSeferler_tbSubeler21">
+      <End Role="tbSubeler2" EntitySet="tbSubeler2" />
+      <End Role="tbSeferler" EntitySet="tbSeferler" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbSubeler2">
+    <Key>
+      <PropertyRef Name="sube_id" />
+    </Key>
+    <Property Name="sube_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sube_ad_bitis" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_tbSeferler_tbSubeler21">
+    <End Type="dbBiletModel.tbSubeler2" Role="tbSubeler2" Multiplicity="0..1" />
+    <End Type="dbBiletModel.tbSeferler" Role="tbSeferler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbSubeler2">
+        <PropertyRef Name="sube_id" />
+      </Principal>
+      <Dependent Role="tbSeferler">
+        <PropertyRef Name="sefer_bitis_sube" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
